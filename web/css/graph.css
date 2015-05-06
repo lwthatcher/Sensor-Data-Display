@@ -1,0 +1,32 @@
+
+    body {
+    font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+    display: none;
+    }
+
+    .line {
+    fill: none;
+    stroke-width: 1.5px;
+    }
+
+    .gyro-x {
+    stroke: steelblue;
+    }
+
+    .gyro-y {
+    stroke: crimson;
+    }
+
+    .gyro-z {
+    stroke: lawngreen;
+    }
