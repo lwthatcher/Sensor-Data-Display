@@ -30,3 +30,23 @@
     .gyro-z {
     stroke: lawngreen;
     }
+
+    .gyro-div {
+    float: left;
+    width: 700px;
+    /* border: 2px solid; */
+    border-color: lawngreen;
+	padding: 20px;
+    resize: both;
+    overflow: auto;
+    }
+
+    .acc-div {
+        float: left;
+        width: 700px;
+        /* border: 2px solid; */
+        border-color: lawngreen;
+    	padding: 20px;
+        resize: both;
+        overflow: auto;
+        }

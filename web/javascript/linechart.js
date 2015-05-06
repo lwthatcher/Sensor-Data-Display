@@ -1,10 +1,8 @@
-function generateGraph()
+function generateGraph(selector, data)
 {
 	var margin = {top: 20, right: 20, bottom: 30, left: 50},
-		width = 960 - margin.left - margin.right,
-		height = 500 - margin.top - margin.bottom;
-
-	var parseDate = d3.time.format("%d-%b-%y").parse;
+		width = 700 - margin.left - margin.right,
+		height = 400 - margin.top - margin.bottom;
 
 	var x = d3.scale.linear()
 		.range([0, width]);
@@ -20,13 +18,15 @@ function generateGraph()
 		.scale(y)
 		.orient("left");
 
-	var svg = d3.select("body").append("svg")
+	console.log(selector);
+
+	var svg = d3.select(selector).append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.tsv("../tsv/gyroscope.tsv", function(error, data) {
+	d3.tsv(data, function(error, data) {
 	  data.forEach(function(d) {
 		d.time = +d.time;
 		d.x = +d.x;
