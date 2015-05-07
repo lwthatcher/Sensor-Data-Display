@@ -1,21 +1,29 @@
 package scripts
 /**
+ * Combines the raw accelerometer and gyroscope data files to one single file with the same time frequencies.
+ *
+ * Arguments: Two digit string representing the trial iteration number.
  *
  * @author Lawrence Thatcher
  */
 class DataBufferer
 {
-    static File input_gyro
-    static File input_accel
     static def output = [[]]
 
+    //--Main--
+
+    /**
+     * @param args Two digit string representing the trial number
+     */
     public static void main(String[] args)
     {
-        println "reading directory locations"
-        input_gyro = new File(directoryRoot + args[0])
-        input_accel = new File(directoryRoot + args[1])
+        String trial_num = args[0]
 
-        def outputDir = new File(directoryRoot + args[2])
+        println "reading directory locations"
+        def input_gyro = new File(INPUT_PATH_PREFIX + trial_num + GYRO_FILE_POSTFIX)
+        def input_accel = new File(INPUT_PATH_PREFIX + trial_num + ACCEL_FILE_POSTFIX)
+
+        def outputDir = new File(OUTPUT_PATH_PREFIX + trial_num + OUTPUT_FILE_POSTFIX)
 
         println "reading in input files"
         def gyros_input =  new FileInputStream(input_gyro)
@@ -48,6 +56,7 @@ class DataBufferer
         println "file creation complete"
     }
 
+    //--I/O Methods--
     private static void writeOutput(File outputDir)
     {
         def out = new PrintWriter(outputDir)
@@ -95,14 +104,21 @@ class DataBufferer
         output.add(entry)
     }
 
-    public static String getDirectoryRoot()
+    //--Path Formatter Helpers--
+    private static String getDirectoryRoot()
     {
         String path = new File("").getAbsolutePath();
         return formatPath(path);
     }
 
-    protected static String formatPath(String path)
+    private static String formatPath(String path)
     {
         return path.replace("\\", "/");
     }
+
+    private static final String INPUT_PATH_PREFIX = directoryRoot + "/data/input/trial_"
+    private static final String GYRO_FILE_POSTFIX = "/gyroscope.txt"
+    private static final String ACCEL_FILE_POSTFIX = "/accelerometer.txt"
+    private static final String OUTPUT_PATH_PREFIX = directoryRoot + "/web/tsv/trial_"
+    private static final String OUTPUT_FILE_POSTFIX = ".tsv"
 }
