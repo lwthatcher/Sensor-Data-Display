@@ -1,3 +1,12 @@
-[{name:"trial 1",path:"../tsv/trial_01.tsv",label:"Flipped"},
-{name:"trial 2",path:"../tsv/trial_02.tsv",label:"Sitting Still"},
-{name:"trial 3",path:"../tsv/trial_03.tsv",label:"Flipped (and dropped)"}]
+{
+	"nodes":[
+	{"name":"01","group":0},
+	{"name":"02","group":1},
+	{"name":"03","group":0},
+	{"name":"04","group":1},
+	{"name":"I04","group":1}
+	],
+	"links":[
+		{"source":3,"target":4}
+	]
+}

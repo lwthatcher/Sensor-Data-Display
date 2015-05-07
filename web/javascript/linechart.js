@@ -20,7 +20,11 @@ function generateGraph(selector, datas, data_x, data_y, data_z)
 
 	console.log(selector);
 
-	var svg = d3.select(selector).append("svg")
+	var svg = d3.select(selector);
+
+	svg.selectAll("*").remove();
+
+	svg
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
