@@ -1,10 +1,10 @@
 {
 	"nodes":[
-	{"name":"01","group":0},
-	{"name":"02","group":1},
-	{"name":"03","group":0},
-	{"name":"04","group":1},
-	{"name":"I04","group":1}
+	{"name":"Trial 1","id":"01","group":"Flipping"},
+	{"name":"Trial 2","id":"02","group":"Sitting Still"},
+	{"name":"Trial 3","id":"03","group":"Flipping"},
+	{"name":"Trial 4 (front)","id":"04","group":"Sitting Still"},
+	{"name":"Trial 4 (all)","id":"I04","group":"Sitting Still"}
 	],
 	"links":[
 		{"source":3,"target":4}

@@ -73,7 +73,7 @@ function drawIndex()
               .attr("class", "node")
               .attr("r", 8)
               .on("click", function(d) {
-              	path = getPath(d.name);
+              	path = getPath(d.id);
               	updateGraphs(path);
               })
               .style("fill", function(d) { return color(d.group); })
