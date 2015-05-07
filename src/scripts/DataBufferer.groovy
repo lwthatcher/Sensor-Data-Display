@@ -18,12 +18,17 @@ class DataBufferer
     public static void main(String[] args)
     {
         String trial_num = args[0]
+        String output_num = trial_num
+        if (args.length > 1)
+        {
+            output_num = args[1]
+        }
 
         println "reading directory locations"
         def input_gyro = new File(INPUT_PATH_PREFIX + trial_num + GYRO_FILE_POSTFIX)
         def input_accel = new File(INPUT_PATH_PREFIX + trial_num + ACCEL_FILE_POSTFIX)
 
-        def outputDir = new File(OUTPUT_PATH_PREFIX + trial_num + OUTPUT_FILE_POSTFIX)
+        def outputDir = new File(OUTPUT_PATH_PREFIX + output_num + OUTPUT_FILE_POSTFIX)
 
         println "reading in input files"
         def gyros_input =  new FileInputStream(input_gyro)
