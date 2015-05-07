@@ -1,0 +1,3 @@
+[{name:"trial 1",path:"../tsv/trial_01.tsv",label:"Flipped"},
+{name:"trial 2",path:"../tsv/trial_02.tsv",label:"Sitting Still"},
+{name:"trial 3",path:"../tsv/trial_03.tsv",label:"Flipped (and dropped)"}]

@@ -1,4 +1,4 @@
-function generateGraph(selector, data)
+function generateGraph(selector, datas, data_x, data_y, data_z)
 {
 	var margin = {top: 20, right: 20, bottom: 30, left: 50},
 		width = 700 - margin.left - margin.right,
@@ -26,12 +26,12 @@ function generateGraph(selector, data)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.tsv(data, function(error, data) {
+	d3.tsv(datas, function(error, data) {
 	  data.forEach(function(d) {
 		d.time = +d.time;
-		d.x = +d.x;
-		d.y = +d.y;
-		d.z = +d.z;
+		d.x = +d[data_x];
+		d.y = +d[data_y];
+		d.z = +d[data_z];
 	  });
 
 		var lineGen = function(dim) {
@@ -40,7 +40,7 @@ function generateGraph(selector, data)
 				.domain(d3.extent(data, function(d) { return d.time; }));
 			var yScale = d3.scale.linear()
 				.range([height, 0])
-				.domain(d3.extent(data, function(d) { return d[dim]; }));
+				.domain([-30000,25000]);
 			var line = d3.svg.line()
 			.x(function(d) { return xScale(d.time); })
 			.y(function(d) { return yScale(d[dim]); });
