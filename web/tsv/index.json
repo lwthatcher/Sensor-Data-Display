@@ -4,7 +4,12 @@
 	{"name":"Trial 2","id":"02","group":"Sitting Still"},
 	{"name":"Trial 3","id":"03","group":"Flipping"},
 	{"name":"Trial 4 (front)","id":"04","group":"Sitting Still"},
-	{"name":"Trial 4 (all)","id":"I04","group":"Sitting Still"}
+	{"name":"Trial 4 (all)","id":"I04","group":"Sitting Still"},
+	{"name":"Trial 5","id":"05","group":"Flipping"},
+	{"name":"Trial 6","id":"06","group":"Flipping"},
+	{"name":"Trial 7","id":"07","group":"Flipping"},
+	{"name":"Trial 8","id":"08","group":"Flipping"},
+	{"name":"Trial 9","id":"09","group":"Sitting Still"}
 	],
 	"links":[
 		{"source":3,"target":4}
