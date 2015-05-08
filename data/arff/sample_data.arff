@@ -1,0 +1,23 @@
+@relation sequence_data
+
+@attribute sequences relational
+   @attribute first_symbol {0, 1}
+   @attribute second_symbol {0, 1}
+@end sequences
+@attribute class {0, 1}
+
+@data
+"0,0\n0,0\n0,1\n1,0\n1,1",1
+"0,1\n1,0",1
+"0,0\n0,0\n0,1\n1,1",0
+"0,0\n0,0\n1,0\n1,1",0
+"0,1\n0,0\n1,0\n1,1",0
+"0,1\n1,0\n0,0",1
+"0,1",0
+"1,0",0
+"0,1\n1,0\n1,1",1
+"0,1\n0,0\n1,1\n1,0\n1,1",0
+"0,1\n1,0\n1,0",1
+"1,0\n1,0\n0,1\n1,0",1
+"0,1\n1,0\n0,1\n1,0",1
+"0,1\n1,0\n0,1\n1,0\n0,1\n1,0",1
