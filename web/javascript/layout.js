@@ -1,8 +1,11 @@
 function initLayout()
 {
-	var path = "../tsv/trial_I04.tsv";
+	var path = "../tsv/trial_01.tsv";
 
-	var top = d3.select("body").append("div");
+	var top = d3.select("body")
+		.append("div")
+		.attr("class","index");
+	createInfoArea();
 	drawIndex();
 
 	var bottom = d3.select("body").append("div")
@@ -31,9 +34,38 @@ function updateGraphs(path)
 	generateGraph("div.acc-div > svg",path,"accelerometer_x","accelerometer_y","accelerometer_z");
 }
 
+function updateInfo(d)
+{
+	lbl_name.text(d.name);
+	lbl_classification.text(d.group);
+}
+
 function getPath(id)
 {
 	return "../tsv/trial_" + id + ".tsv";
+}
+
+function createInfoArea()
+{
+	var info = d3.select("body")
+		.append("div")
+		.attr("class","info");
+
+	var div_name = info.append("div");
+	div_name.append("h2").text("Data Set:");
+	div_name.append("br");
+	lbl_name = div_name.append("label")
+		.text("Trial 1")
+		.attr("class","btn btn-primary");
+
+	var div_class = info.append("div");
+	div_class.append("h2").text("Classification:");
+	div_class.append("br");
+	lbl_classification = div_class.append("label")
+		.text("Flipping")
+		.attr("class","btn btn-success");
+
+	d3.select("body").append("br");
 }
 
 function drawIndex()
@@ -75,6 +107,7 @@ function drawIndex()
               .on("click", function(d) {
               	path = getPath(d.id);
               	updateGraphs(path);
+              	updateInfo(d);
               })
               .style("fill", function(d) { return color(d.group); })
               .call(force.drag);

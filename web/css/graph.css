@@ -38,7 +38,6 @@
     border-color: lawngreen;
 	padding: 20px;
     resize: both;
-    overflow: auto;
     }
 
     .acc-div {
@@ -48,5 +47,8 @@
         border-color: lawngreen;
     	padding: 20px;
         resize: both;
-        overflow: auto;
         }
+
+	.graphs {
+		clear: both;
+	}
