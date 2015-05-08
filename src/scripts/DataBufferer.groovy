@@ -1,4 +1,7 @@
 package scripts
+
+import org.json.*
+
 /**
  * Combines the raw accelerometer and gyroscope data files to one single file with the same time frequencies.
  *
@@ -19,9 +22,12 @@ class DataBufferer
     {
         String trial_num = args[0]
         String output_num = trial_num
-        if (args.length > 1)
+
+        String label = args[1]
+
+        if (args.length > 2)
         {
-            output_num = args[1]
+            output_num = args[2]
         }
 
         println "reading directory locations"
@@ -59,6 +65,8 @@ class DataBufferer
         println "writing output"
         writeOutput(outputDir)
         println "file creation complete"
+        println "updating json file"
+        addElementToJSON(output_num,label)
     }
 
     //--I/O Methods--
@@ -109,6 +117,40 @@ class DataBufferer
         output.add(entry)
     }
 
+    //--JSON Methods--
+    private static void addElementToJSON(String outputName, String label)
+    {
+        def json = jsonFromFile
+        def nodes = json.getJSONArray("nodes")
+        def newEntry = createObject(outputName,label)
+        nodes.put(newEntry)
+        writeToJSONFile(json)
+    }
+
+    private static void writeToJSONFile(JSONObject json)
+    {
+        def out = new PrintWriter(new File(JSON_DIR))
+        out.print(json.toString(2))
+        out.close()
+    }
+
+    private static JSONObject getJsonFromFile()
+    {
+        def stream = new FileInputStream(new File(JSON_DIR))
+        String text = stream.text
+        stream.close()
+        return new JSONObject(text)
+    }
+
+    private static JSONObject createObject(String outputName, String label)
+    {
+        JSONObject node = new JSONObject()
+        node.put("name","Trial " + outputName)
+        node.put("id",outputName)
+        node.put("group",label)
+        return node
+    }
+
     //--Path Formatter Helpers--
     private static String getDirectoryRoot()
     {
@@ -126,4 +168,5 @@ class DataBufferer
     private static final String ACCEL_FILE_POSTFIX = "/accelerometer.txt"
     private static final String OUTPUT_PATH_PREFIX = directoryRoot + "/web/tsv/trial_"
     private static final String OUTPUT_FILE_POSTFIX = ".tsv"
+    private static final String JSON_DIR = directoryRoot + "/web/tsv/index.json"
 }
