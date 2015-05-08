@@ -39,7 +39,7 @@ function getPath(id)
 function drawIndex()
 {
 	var width = 800;
-	var height = 200;
+	var height = 350;
 
 	var color = d3.scale.category20();
 

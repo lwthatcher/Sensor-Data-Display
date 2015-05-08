@@ -2,16 +2,33 @@
 	"nodes":[
 	{"name":"Trial 1","id":"01","group":"Flipping"},
 	{"name":"Trial 2","id":"02","group":"Sitting Still"},
-	{"name":"Trial 3","id":"03","group":"Flipping"},
+	{"name":"Trial 3 (all)","id":"03","group":"Multiple"},
 	{"name":"Trial 4 (front)","id":"04","group":"Sitting Still"},
 	{"name":"Trial 4 (all)","id":"I04","group":"Sitting Still"},
 	{"name":"Trial 5","id":"05","group":"Flipping"},
-	{"name":"Trial 6","id":"06","group":"Flipping"},
-	{"name":"Trial 7","id":"07","group":"Flipping"},
+	{"name":"Trial 6 (front)","id":"06","group":"Flipping"},
+	{"name":"Trial 7 (front)","id":"07","group":"Flipping"},
 	{"name":"Trial 8","id":"08","group":"Flipping"},
-	{"name":"Trial 9","id":"09","group":"Sitting Still"}
+	{"name":"Trial 9","id":"09","group":"Sitting Still"},
+	{"name":"Trial 3 (front)","id":"I03a","group":"Flipping"},
+	{"name":"Trial 3 (end)","id":"I03b","group":"Sitting Still"},
+	{"name":"Trial 6 (all)","id":"I06a","group":"Multiple"},
+	{"name":"Trial 6 (middle)","id":"I06b","group":"Flipping"},
+	{"name":"Trial 6 (end)","id":"I06c","group":"Sitting Still"},
+	{"name":"Trial 6 (middle)","id":"I06b","group":"Flipping"},
+	{"name":"Trial 7 (middle)","id":"I07a","group":"Flipping"},
+	{"name":"Trial 7 (end)","id":"I07b","group":"Sitting Still"},
+	{"name":"Trial 7 (all)","id":"I07c","group":"Multiple"}
 	],
 	"links":[
-		{"source":3,"target":4}
+		{"source":3,"target":4},
+		{"source":2,"target":10},
+		{"source":2,"target":11},
+		{"source":6,"target":12},
+		{"source":12,"target":13},
+		{"source":12,"target":14},
+		{"source":7,"target":18},
+		{"source":16,"target":18},
+		{"source":17,"target":18}
 	]
 }
