@@ -1,105 +1,173 @@
 {
   "nodes": [
     {
-      "name": "Trial 1",
+      "index":"0",
+			"name": "Trial 1",
       "id": "01",
       "group": "Flipping"
     },
     {
-      "name": "Trial 2",
+      "index":"1",
+			"name": "Trial 2",
       "id": "02",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 3 (all)",
+      "index":"2",
+			"name": "Trial 3 (all)",
       "id": "03",
       "group": "Multiple"
     },
     {
-      "name": "Trial 4 (front)",
+      "index":"3",
+			"name": "Trial 4 (front)",
       "id": "04",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 4 (all)",
+      "index":"4",
+			"name": "Trial 4 (all)",
       "id": "I04",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 5",
+      "index":"5",
+			"name": "Trial 5",
       "id": "05",
       "group": "Flipping"
     },
     {
-      "name": "Trial 6 (front)",
+      "index":"6",
+			"name": "Trial 6 (front)",
       "id": "06",
       "group": "Flipping"
     },
     {
-      "name": "Trial 7 (front)",
+      "index":"7",
+			"name": "Trial 7 (front)",
       "id": "07",
       "group": "Flipping"
     },
     {
-      "name": "Trial 8",
+      "index":"8",
+			"name": "Trial 8",
       "id": "08",
       "group": "Flipping"
     },
     {
-      "name": "Trial 9",
+      "index":"9",
+			"name": "Trial 9",
       "id": "09",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 3 (front)",
+      "index":"10",
+			"name": "Trial 3 (front)",
       "id": "I03a",
       "group": "Flipping"
     },
     {
-      "name": "Trial 3 (end)",
+      "index":"11",
+			"name": "Trial 3 (end)",
       "id": "I03b",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 6 (all)",
+      "index":"12",
+			"name": "Trial 6 (all)",
       "id": "I06a",
       "group": "Multiple"
     },
     {
-      "name": "Trial 6 (middle)",
+      "index":"13",
+			"name": "Trial 6 (middle)",
       "id": "I06b",
       "group": "Flipping"
     },
     {
-      "name": "Trial 6 (end)",
+      "index":"14",
+			"name": "Trial 6 (end)",
       "id": "I06c",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 6 (middle)",
-      "id": "I06b",
-      "group": "Flipping"
-    },
-    {
-      "name": "Trial 7 (middle)",
+      "index":"15",
+			"name": "Trial 7 (middle)",
       "id": "I07a",
       "group": "Flipping"
     },
     {
-      "name": "Trial 7 (end)",
+      "index":"16",
+			"name": "Trial 7 (end)",
       "id": "I07b",
       "group": "Sitting_Still"
     },
     {
-      "name": "Trial 7 (all)",
+      "index":"17",
+			"name": "Trial 7 (all)",
       "id": "I07c",
       "group": "Multiple"
     },
     {
-      "name": "Trial 10",
+      "index":"18",
+			"name": "Trial 10 (all)",
       "id": "10",
       "group": "Shaking"
-    }
+    },
+    {
+      "index":"19",
+			"name": "Trial 8 (trimmed)",
+      "id": "T08",
+	  "group": "Flipping-Trimmed"
+    },
+    {
+    "index":"20",
+			"name": "Trial 1 (trimmed)",
+			"id": "T01",
+			"group": "Flipping-Trimmed"
+		},
+		{
+			"index":"21",
+			"name": "Trial 3 (front - trimmed)",
+			"id": "TI03a",
+			"group": "Flipping-Trimmed"
+		},
+		{
+    "index":"22",
+		"name": "Trial 9 (trimmed 1)",
+		"id": "T09a",
+		"group": "Sitting-Trimmed"
+		},
+		{
+    "index":"23",
+		"name": "Trial 9 (trimmed 2)",
+		"id": "T09b",
+		"group": "Sitting-Trimmed"
+		},
+		{
+    "index":"24",
+		"name": "Trial 9 (trimmed 3)",
+		"id": "T09c",
+		"group": "Sitting-Trimmed"
+		},
+		{
+    "index":"25",
+		"name": "Trial 9 (trimmed 4)",
+		"id": "T09d",
+		"group": "Sitting-Trimmed"
+		},
+		{
+    "index":"26",
+		"name": "Trial 6 (middle - trimmed 1)",
+		"id": "TI06b-a",
+		"group": "Flipping-Trimmed"
+		},
+		{
+    "index":"27",
+		"name": "Trial 6 (middle - trimmed 2)",
+		"id": "TI06b-b",
+		"group": "Flipping-Trimmed"
+		}
   ],
   "links": [
     {
@@ -115,8 +183,8 @@
       "target": 11
     },
     {
-      "source": 6,
-      "target": 12
+      "source": 12,
+      "target": 6
     },
     {
       "source": 12,
@@ -128,15 +196,52 @@
     },
     {
       "source": 7,
-      "target": 18
+      "target": 17
     },
     {
       "source": 16,
-      "target": 18
+      "target": 17
     },
     {
       "source": 17,
-      "target": 18
+      "target": 15
     }
+    ,
+		{
+	  	"source": 8,
+	  	"target": 19
+		},
+		{
+	  	"source": 0,
+	  	"target": 20
+		},
+		{
+	  	"source": 10,
+	  	"target": 21
+		},
+		{
+	  	"source": 9,
+	  	"target": 22
+		},
+		{
+	  	"source": 9,
+	  	"target": 23
+		},
+		{
+	  	"source": 9,
+	  	"target": 24
+		},
+		{
+	  	"source": 9,
+	  	"target": 25
+		},
+		{
+	  	"source": 13,
+	  	"target": 26
+		},
+		{
+	  	"source": 13,
+	  	"target": 27
+		}
   ]
 }
