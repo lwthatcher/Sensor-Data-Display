@@ -8,7 +8,7 @@
     {
       "name": "Trial 2",
       "id": "02",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 3 (all)",
@@ -18,12 +18,12 @@
     {
       "name": "Trial 4 (front)",
       "id": "04",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 4 (all)",
       "id": "I04",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 5",
@@ -48,7 +48,7 @@
     {
       "name": "Trial 9",
       "id": "09",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 3 (front)",
@@ -58,7 +58,7 @@
     {
       "name": "Trial 3 (end)",
       "id": "I03b",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 6 (all)",
@@ -73,7 +73,7 @@
     {
       "name": "Trial 6 (end)",
       "id": "I06c",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 6 (middle)",
@@ -88,7 +88,7 @@
     {
       "name": "Trial 7 (end)",
       "id": "I07b",
-      "group": "Sitting Still"
+      "group": "Sitting_Still"
     },
     {
       "name": "Trial 7 (all)",
